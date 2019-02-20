@@ -2,16 +2,25 @@
   "name": "desktop-v1-beta-pos",
   "version": "0.1.0",
   "private": true,
+  "main": "public/Main.js",
+  "homepage": "./",
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "redux": "^4.0.1",
+    "typescript": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "build -c.extraMetadata.main=build/Main.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +30,19 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "electron": "^4.0.5",
+    "electron-builder": "^20.38.5"
+  },
+  "build": {
+    "appId": "nonExistentID",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
 }
