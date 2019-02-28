@@ -1,0 +1,42 @@
+PUNTO DE VENTA
+
+planificacion 4h
+diseño 12h
+vista de login 8h
+vista de cliente con boton para facturar sin identificar 4h
+vista de compra, medio de pago 20h
+listado de usuarios (sin detalle) 4h
+listado de productos (sin detalle) 4h
+vista de facturas (lista y detalle) 8h
+vista de clientes (lista y detalle con credito) 8h
+cierre y cuadre de caja 8h
+integracion con impresora 8h
+integracion con lector de codigo de barras 8h
+trabajo sin conexion 4h
+acciones de supervisor (retirar articulo de factura y anular factura) 8h
+creacion de presupuestos 8h
+integracion con API 16h
+panel de usuario (simplificado) 4h
+panel de atajos 8h
+
+total: 144h
+total con holgura: 20d
+
+RESTAURANTES
+
+Diseño 8h
+vista de mesas 8h
+vista de pedido 8h
+panel de usuario 8h
+precuenta 8h
+cierre de mesa 8h
+integracion con API 16h
+vista de login 8h
+integracion con impresora 8h
+integracion con lector de codigo 8h
+
+total: 88h
+total con holgura: 15d
+
+TOTAL AMBAS APPS: 35
+TOTAL AMBAS APPS CON HOLGURA: 40d
