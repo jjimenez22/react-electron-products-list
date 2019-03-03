@@ -92,8 +92,8 @@ img.logo{
 
 .table-container{
     /*border-bottom: 1px groove rgba(0,0,0,1);*/
-    background-color: white;
-    box-shadow: inset -0.5rem -0.5rem 1rem -0.9rem rgba(0,0,0,0.75);
+    background-color: #edf1f5;
+    /*box-shadow: inset -0.5rem -0.5rem 1rem -0.9rem rgba(0,0,0,0.75);*/
     /*box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)!importan //pequena */
     /*box-shadow: inset 0 -50px 15px -48px rgba(0,0,0,1);*/
 }
@@ -108,7 +108,7 @@ p{
 
 .price-item{
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.7em;
 
 }
 
@@ -205,7 +205,7 @@ tr th {
 }
 
 .column-menu{
-    background-color: black;
+    /*background-color: black;*/
     height: 54%;
     margin-top: auto;
     border-top-left-radius: .5rem;
@@ -236,12 +236,19 @@ tr th {
     background-color: white!important;
 }
 
+.b-gray{
+    background-color: #edf1f5!important;
+}
+
 button{
     cursor: pointer;
 }
 .button-change-points{
     background-color: #00b286;
     margin-top:10px!important;
+    width: 65%;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .column-buttons{
@@ -249,20 +256,21 @@ button{
 
 .column-buttons button:first-child {
     background-color: #f37a56;
-    width: 80%;
-    font-size: 1.3rem;
+    width: 65%;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
 }
 .button-change-points,
 .column-buttons button{
     padding: 10px 8px;
-    font-weight: 500;
     border: none;
     border-radius: .5rem;
     margin: 0 auto 15px auto;
     display: block;
-    width: 50%;
+    width: 65%;
+    font-size: 1rem;
+    font-weight: bold;
     color: white;
 }
 .column-buttons button:not(:first-child) {
@@ -273,9 +281,9 @@ nav.navbar li{
     margin-right: 10px;
 }
 nav.navbar a{
-    color: white!important;
+    color: black!important;
     text-align: center;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 nav.navbar a i{
