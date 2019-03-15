@@ -1,0 +1,77 @@
+.column-buttons button {
+    padding: 10px 8px;
+    border: none;
+    border-radius: .5rem;
+    margin: 0 auto 15px auto;
+    display: block;
+    width: 65%;
+    height: 60px;
+    font-size: 16px;
+    color: white;
+    background-color: #555;
+}
+
+.column-buttons button:first-child {
+    background-color: #00b286;
+}
+
+.column-buttons button:last-child {
+    background-color: #f37a56;
+}
+
+.card-container {
+    height: 70px;
+    width: 110px;
+    background-color: goldenrod;
+    margin: auto auto 10px auto;
+    position: relative;
+    border-radius: 8px;
+}
+
+.card-container::before {
+    content: '';
+    background-color: white;
+    height: 60px;
+    width: 100px;
+    top: calc(50% - 30px);
+    left: calc(50% - 50px);
+    position: absolute;
+    border-radius: 5px;
+}
+
+.card-container::after {
+    content: '';
+    background-color: goldenrod;
+    height: 10px;
+    width: 100px;
+    top: 16px;
+    left: calc(50% - 50px);
+    position: absolute;
+}
+
+.cuadro {
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    background-color: goldenrod;
+    border-radius: 2px;
+    z-index: 1;
+    bottom: 11px;
+    left: 11px;
+}
+
+.cuadro::before {
+    content: '';
+    width: 25px;
+    height: 10px;
+    position: absolute;
+    background-color: goldenrod;
+    border-radius: 2px;
+    z-index: 1;
+    bottom: 0;
+    left: 20px;
+}
+
+.p-top-0 {
+    padding-top: 0 !important;
+}

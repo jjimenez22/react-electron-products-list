@@ -1,0 +1,25 @@
+#bs {
+    height: calc(100% - 10px);
+    margin-bottom: 10px;
+}
+
+.half-height {
+    height: 50%;
+}
+
+.line:before {
+    content: "";
+    width: 1px;
+    height: 200%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.rounded.highlighted {
+    background-color: black;
+    padding: 5px 0 0 10px;
+    color: white;
+    border-radius: .5rem !important;
+}

@@ -1,0 +1,10 @@
+
+.height-main {
+    height: calc(65% - 10px);
+    margin-bottom: 10px
+}
+
+.height-main .px-3 {
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+}
