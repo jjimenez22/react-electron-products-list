@@ -9,6 +9,12 @@ const ActionBar = (props) => {
                 <div className="navbar-collapse justify-content-end">
                     <ul className="navbar-nav justify-content-end">
                         <li className="nav-item">
+                            <a className="nav-link" href="#" onClick={props.onAdd}>
+                                <FontAwesomeIcon icon="cart-plus" className="fas d-block"/>
+                                Agregar
+                            </a>
+                        </li>
+                        <li className="nav-item">
                             <a className="nav-link" href="#">
                                 <FontAwesomeIcon icon="cash-register" className="fas d-block"/>
                                 Canjear

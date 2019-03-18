@@ -5,6 +5,7 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {
+    faCartPlus,
     faCashRegister,
     faFileContract,
     faHandHoldingUsd,
@@ -13,20 +14,15 @@ import {
     faUsers,
     faWindowClose
 } from '@fortawesome/free-solid-svg-icons'
-import {createStore} from "redux";
-import reducers from "./reducers/index";
 import {Provider} from "react-redux";
+import Store from "./reducers/store";
 
 //add icons to be used
-library.add(faCashRegister, faFileContract, faUsers, faShoppingCart, faHandHoldingUsd, faIdBadge, faWindowClose);
-
-//Redux store
-let store = createStore(reducers);
-store.subscribe(() => console.log(store.getState()));
+library.add(faCashRegister, faFileContract, faUsers, faShoppingCart, faHandHoldingUsd, faIdBadge, faWindowClose, faCartPlus);
 
 //render react app
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={Store}>
         <App/>
     </Provider>,
     document.getElementById('root'));
