@@ -1,6 +1,6 @@
 import React from 'react';
 import './actions.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const ActionBar = (props) => {
     return (

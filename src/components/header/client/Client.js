@@ -1,5 +1,5 @@
 import React from 'react';
-import './clientStyles.css';
+import './client.css'
 
 export default function Client(props) {
     return (
@@ -9,3 +9,4 @@ export default function Client(props) {
         </div>
     );
 }
+
