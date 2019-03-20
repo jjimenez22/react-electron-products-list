@@ -1,4 +1,3 @@
-import React from 'react';
 import ActionBar from "./ActionBar";
 import {connect} from "react-redux";
 import {addProduct} from "../../../actions";

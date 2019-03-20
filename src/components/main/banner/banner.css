@@ -65,7 +65,7 @@
 }
 
 .d-flex {
-    display: block !important;
+    display: flex !important;
 }
 
 .flex-column {
@@ -78,5 +78,5 @@
     font-size: 24px;
     font-weight: 300;
     line-height: 1.2;
-    font-family: "Poppins", sans-serif;
+    /*font-family: "Poppins", sans-serif;*/
 }

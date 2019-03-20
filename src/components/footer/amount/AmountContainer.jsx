@@ -1,4 +1,3 @@
-import React from 'react';
 import BillSection from "./BillSection";
 import {connect} from "react-redux";
 import format from "../../../util/numberFormat";

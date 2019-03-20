@@ -19,9 +19,9 @@ export default function Points(props) {
                 <div className="cuadro"/>
             </div>
             <div className="column-buttons">
-                <button>Pagar</button>
-                <button>Returar producto</button>
-                <button>Anular factura</button>
+                <button onClick={props.onPay}>Pagar</button>
+                <button onClick={props.onRemove}>Retirar producto</button>
+                <button onClick={props.onCancel}>Anular factura</button>
             </div>
         </div>
     );

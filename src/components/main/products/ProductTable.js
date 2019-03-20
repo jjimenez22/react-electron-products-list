@@ -2,8 +2,16 @@ import React from 'react';
 import ProductTableRow from "./ProductTableRow";
 
 export default function ProductTable(props) {
-    const products = props.products.map((product) =>
-        (<ProductTableRow key={product.id} product={product}/>));
+    const rows = [];
+    props.items.forEach((item) => {
+        rows.push((<ProductTableRow key={item.product.id} item={item}/>));
+        if (item.product.discount != 0)
+            rows.push(<ProductTableRow
+                key={`${item.product.id}discount`}
+                isDiscount={true}
+                item={item}
+            />)
+    });
     return (
         <div className="col-7 m-100 table-container  p-0">
             <div className="row table-responsive pt-2 m-100 mx-0 px-2">
@@ -25,7 +33,7 @@ export default function ProductTable(props) {
                     </tr>
                     </thead>
                     <tbody>
-                    {products}
+                    {rows}
                     </tbody>
                 </table>
             </div>
