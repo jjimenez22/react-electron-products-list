@@ -4,13 +4,16 @@ import './App.css';
 import MainComponent from "./main/MainComponent";
 import HeaderComponent from "./header/HeaderComponent";
 import FooterComponent from "./footer/FooterComponent";
+import {BrowserRouter, Route} from "react-router-dom";
 
 class App extends Component {
     render() {
         return (
             <div id="main-wrapper">
                 <HeaderComponent/>
-                <MainComponent/>
+                <BrowserRouter>
+                    <Route path="/" component={MainComponent}/>
+                </BrowserRouter>
                 <FooterComponent/>
             </div>
         );
