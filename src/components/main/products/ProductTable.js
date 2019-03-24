@@ -5,12 +5,6 @@ export default function ProductTable(props) {
     const rows = [];
     props.items.forEach((item) => {
         rows.push((<ProductTableRow key={item.product.id} item={item}/>));
-        if (item.product.discount != 0)
-            rows.push(<ProductTableRow
-                key={`${item.product.id}discount`}
-                isDiscount={true}
-                item={item}
-            />)
     });
     return (
         <div className="col-7 m-100 table-container  p-0">

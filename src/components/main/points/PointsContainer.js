@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
     };
 };
 
-function mapPurchaseToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
     return {
         onPay: (e) => {
         },
@@ -22,7 +22,7 @@ function mapPurchaseToProps(dispatch) {
 
 const PointsContainer = connect(
     mapStateToProps,
-    mapPurchaseToProps
+    mapDispatchToProps
 )(Points);
 
 export default PointsContainer;
