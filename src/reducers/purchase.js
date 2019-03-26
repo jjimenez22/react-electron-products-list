@@ -1,7 +1,15 @@
-import {ADD_PRODUCT, REMOVE_PRODUCT} from "../actions/index";
+import {ADD_PRODUCT, BEGIN_PAYMENT, BEGIN_PURCHASE, PRINT_INVOICE, REMOVE_PRODUCT} from "../actions/index";
+
+export const ENTER_CLIENT_STATUS = 'ENTER_CLIENT';
+export const ENTER_PRODUCTS_STATUS = 'ENTER_PRODUCTS';
+export const ENTER_PAYMENT_STATUS = 'ENTER_PAYMENT';
+export const PRINTING_STATUS = 'PRINTING';
 
 const initialState = {
-    clientName: 'Randy Javier',
+    status: ENTER_CLIENT_STATUS,
+    client: {
+        name: 'Randy Javier',
+    },
     points: {
         generated: 14,
         available: 156
@@ -82,6 +90,19 @@ function purchase(state = initialState, action) {
                 bill: bill(state.bill, Object.assign(action, {
                     amount: state.items.find(value => value.product.id === action.product.id).amount
                 }))
+            });
+        case BEGIN_PURCHASE:
+            return Object.assign({}, state, {
+                client: action.client,
+                status: ENTER_PRODUCTS_STATUS,
+            });
+        case BEGIN_PAYMENT:
+            return Object.assign({}, state, {
+                status: ENTER_PAYMENT_STATUS,
+            });
+        case PRINT_INVOICE:
+            return Object.assign({}, state, {
+                status: PRINTING_STATUS,
             });
         default:
             return state;

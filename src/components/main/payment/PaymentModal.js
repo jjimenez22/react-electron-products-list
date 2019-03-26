@@ -4,12 +4,13 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import './payment.css';
 import format from "../../../util/numberFormat";
+import Link from "react-router-dom/es/Link";
 
-const PaymentModal = () => {
+const PaymentModal = (props) => {
     const paymentMethods = ['credito', 'debito', 'efectivo']
         .map(value => <option key={value}>{value}</option>);
     return (
-        <Modal show={true} id="payment-modal">
+        <Modal show={props.show} id="payment-modal">
             <Modal.Header>
                 <Form.Label>Total a pagar: {format(14000)}</Form.Label>
                 <Form.Label>Cambio: {format(0.46)}</Form.Label>
@@ -27,7 +28,9 @@ const PaymentModal = () => {
                 </Form>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="primary">Pagar</Button>
+                <Link to="/invoice">
+                    <Button onClick={props.onPay} variant="primary">Pagar</Button>
+                </Link>
                 <Button variant="secondary">Cancelar</Button>
             </Modal.Footer>
         </Modal>

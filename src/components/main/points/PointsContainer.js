@@ -1,6 +1,6 @@
 import Points from "./Points";
 import {connect} from "react-redux";
-import {removeProduct} from "../../../actions";
+import {beginPayment, removeProduct} from "../../../actions";
 
 const mapStateToProps = (state) => {
     return {
@@ -11,6 +11,7 @@ const mapStateToProps = (state) => {
 function mapDispatchToProps(dispatch) {
     return {
         onPay: (e) => {
+            dispatch(beginPayment())
         },
         onRemove: (e) => {
             dispatch(removeProduct(2))

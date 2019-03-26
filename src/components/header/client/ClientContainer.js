@@ -2,7 +2,7 @@ import connect from "react-redux/es/connect/connect";
 import Client from './Client';
 
 function mapStateToProps(state) {
-    return {clientName: state.purchase.clientName};
+    return {client: state.purchase.client};
 }
 
 const ClientContainer = connect(

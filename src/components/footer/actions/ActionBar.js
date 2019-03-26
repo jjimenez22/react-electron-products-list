@@ -1,6 +1,7 @@
 import React from 'react';
 import './actions.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Link} from "react-router-dom";
 
 const ActionBar = (props) => {
     return (
@@ -22,24 +23,24 @@ const ActionBar = (props) => {
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/main/invoices">
                                 <FontAwesomeIcon icon="file-contract" className="fas d-block"/>
                                 Facturas
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/main/clients">
                                 <FontAwesomeIcon icon="users" className="fas d-block"/>
                                 Clientes
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/main/products">
                                 <FontAwesomeIcon icon="shopping-cart" className="fas d-block"/>
                                 Productos
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
@@ -50,10 +51,10 @@ const ActionBar = (props) => {
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/main/users">
                                 <FontAwesomeIcon icon="id-badge" className="fas d-block"/>
                                 Usuarios
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
