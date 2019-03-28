@@ -1,9 +1,10 @@
 import React from 'react';
 import Table from "react-bootstrap/Table";
+import './invoice.css'
 
 const Invoice = props => {
     return (
-        <div>
+        <div id="invoice">
             <p className="text-center font-weight-bold">NOMBRE COMERCIAL</p>
             <p className="text-center">DIRECCION Y TELEFONO</p>
             <p>Direccion general de Impuestos Internos</p>

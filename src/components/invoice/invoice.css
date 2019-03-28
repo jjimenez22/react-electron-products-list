@@ -1,0 +1,10 @@
+#invoice {
+    margin: auto;
+    padding: 20px 5px;
+    width: 300px;
+    font-size: 12px;
+}
+
+#invoice th, #invoice td {
+    border: 0;
+}

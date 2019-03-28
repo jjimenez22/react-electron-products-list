@@ -11,10 +11,10 @@ const ClientModal = props => {
                 <Form.Label>Cliente a atender</Form.Label>
             </Modal.Header>
             <Modal.Body>
-                <Form>
+                <Form onSubmit={props.onAccept}>
                     <Form.Group>
                         <Form.Label>Nombre del Cliente</Form.Label>
-                        <Form.Control type="text"/>
+                        <Form.Control type="text" onChange={props.onNameChange}/>
                     </Form.Group>
                 </Form>
             </Modal.Body>
