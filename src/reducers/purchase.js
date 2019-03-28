@@ -1,50 +1,65 @@
-import {ADD_PRODUCT, BEGIN_PAYMENT, BEGIN_PURCHASE, PRINT_INVOICE, REMOVE_PRODUCT} from "../actions/index";
+import {ADD_PRODUCT, BEGIN_PAYMENT, BEGIN_PURCHASE, PRINT_INVOICE, REMOVE_PRODUCT, SET_PAYED} from "../actions/index";
+import {CLOSE_MODAL, OPEN_ADD_PRODUCT_MODAL, SET_PAYMENT_METHOD} from "../actions";
 
 export const ENTER_CLIENT_STATUS = 'ENTER_CLIENT';
 export const ENTER_PRODUCTS_STATUS = 'ENTER_PRODUCTS';
+export const MANUAL_PRODUCT_ENTER_STATUS = 'MANUAL_PRODUCT_ENTER';
 export const ENTER_PAYMENT_STATUS = 'ENTER_PAYMENT';
 export const PRINTING_STATUS = 'PRINTING';
 
 const initialState = {
     status: ENTER_CLIENT_STATUS,
     client: {
-        name: 'Randy Javier',
+        // name: 'Randy Javier',
     },
     points: {
-        generated: 14,
-        available: 156
+        generated: 0,
+        available: 0,
     },
     items: [
-        {
-            product: {
-                id: 0,
-                description: 'Atún en Lata',
-                price: 0.80,
-                itbis: 0.08,
-                discount: 0.0
-            },
-            amount: 1
-        },
-        {
-            product: {
-                id: 1,
-                description: 'Jabón la Llave',
-                price: 2.00,
-                itbis: 0.20,
-                discount: 0.60
-            },
-            amount: 2
-        },
+        // {
+        //     product: {
+        //         id: 0,
+        //         description: 'Atún en Lata',
+        //         price: 0.80,
+        //         itbis: 0.08,
+        //         discount: 0.0
+        //     },
+        //     amount: 1
+        // },
+        // {
+        //     product: {
+        //         id: 1,
+        //         description: 'Jabón la Llave',
+        //         price: 2.00,
+        //         itbis: 0.20,
+        //         discount: 0.60
+        //     },
+        //     amount: 2
+        // },
     ],
     bill: {
-        payed: 14114.54,
-        change: 0.46,
-        saved: -4.80,
-        total: 14114.54
+        payed: 0,
+        change: 0,
+        saved: 0,
+        total: 0,
+        paymentMethod: 'credito',
     }
 };
 
 function bill(state = {}, action) {
+    switch (action.type) {
+        case SET_PAYED:
+            return Object.assign({}, state, {
+                payed: action.payed,
+                change: action.payed - state.total,
+            });
+        case SET_PAYMENT_METHOD:
+            return Object.assign({}, state, {
+                paymentMethod: action.paymentMethod,
+            });
+    }
+
     const discount = action.product.discount * action.amount;
     const price = (action.product.price + action.product.itbis) * action.amount - discount;
     switch (action.type) {
@@ -79,6 +94,7 @@ function purchase(state = initialState, action) {
     switch (action.type) {
         case ADD_PRODUCT:
             return Object.assign({}, state, {
+                status: ENTER_PRODUCTS_STATUS,
                 items: addProduct(state.items, action.product, action.amount),
                 bill: bill(state.bill, action)
             });
@@ -99,6 +115,22 @@ function purchase(state = initialState, action) {
         case BEGIN_PAYMENT:
             return Object.assign({}, state, {
                 status: ENTER_PAYMENT_STATUS,
+            });
+        case OPEN_ADD_PRODUCT_MODAL:
+            return Object.assign({}, state, {
+                status: MANUAL_PRODUCT_ENTER_STATUS
+            });
+        case CLOSE_MODAL:
+            return Object.assign({}, state, {
+                status: ENTER_PRODUCTS_STATUS
+            });
+        case SET_PAYED:
+            return Object.assign({}, state, {
+                bill: bill(state.bill, action)
+            });
+        case SET_PAYMENT_METHOD:
+            return Object.assign({}, state, {
+                bill: bill(state.bill, action)
             });
         case PRINT_INVOICE:
             return Object.assign({}, state, {

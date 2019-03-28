@@ -8,7 +8,7 @@ const ClientModal = props => {
     return (
         <Modal show={props.show} id="client-modal">
             <Modal.Header>
-                <Form.Label>Cliente a atender</Form.Label>
+                <Form.Label>Cliente</Form.Label>
             </Modal.Header>
             <Modal.Body>
                 <Form onSubmit={props.onAccept}>
@@ -27,7 +27,8 @@ const ClientModal = props => {
 
 ClientModal.propTypes = {
     show: PropTypes.bool,
-    onAccept: PropTypes.func.isRequired
+    onNameChange: PropTypes.func.isRequired,
+    onAccept: PropTypes.func.isRequired,
 };
 
 ClientModal.defaultProps = {

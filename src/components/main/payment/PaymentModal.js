@@ -12,18 +12,19 @@ const PaymentModal = (props) => {
     return (
         <Modal show={props.show} id="payment-modal">
             <Modal.Header>
-                <Form.Label>Total a pagar: {format(14000)}</Form.Label>
-                <Form.Label>Cambio: {format(0.46)}</Form.Label>
+                <Form.Label>Total a pagar: {format(props.bill.total)}</Form.Label>
+                <Form.Label>Cambio: {format(props.bill.change)}</Form.Label>
             </Modal.Header>
             <Modal.Body>
                 <Form>
                     <Form.Group>
                         <Form.Label>Metodo de pago</Form.Label>
-                        <Form.Control as="select">
+                        <Form.Control as="select" onChange={props.onMethodChange}>
                             {paymentMethods}
                         </Form.Control>
                         <Form.Label>Monto pagado</Form.Label>
-                        <Form.Control type="number" step="0.01"/>
+                        <Form.Control type="number" step="0.01"
+                                      onChange={props.onPayedChange}/>
                     </Form.Group>
                 </Form>
             </Modal.Body>
@@ -31,7 +32,8 @@ const PaymentModal = (props) => {
                 <Link to="/invoice">
                     <Button onClick={props.onPay} variant="primary">Pagar</Button>
                 </Link>
-                <Button variant="secondary">Cancelar</Button>
+                <Button variant="secondary"
+                        onClick={props.onCancel}>Cancelar</Button>
             </Modal.Footer>
         </Modal>
     );

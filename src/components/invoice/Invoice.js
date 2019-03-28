@@ -3,6 +3,13 @@ import Table from "react-bootstrap/Table";
 import './invoice.css'
 
 const Invoice = props => {
+    const rows = props.items.map(p => (
+        <tr key={p.product.id}>
+            <td>{p.product.description}</td>
+            <td>{p.product.itbis}</td>
+            <td>{p.product.total}</td>
+        </tr>
+    ));
     return (
         <div id="invoice">
             <p className="text-center font-weight-bold">NOMBRE COMERCIAL</p>
@@ -24,30 +31,16 @@ const Invoice = props => {
                 </tr>
                 </thead>
                 <tbody>
+                {rows}
                 <tr>
-                    <td>Producto #5</td>
-                    <td>1.80</td>
-                    <td>11.80</td>
-                </tr>
-                <tr>
-                    <td>Producto #5</td>
-                    <td>0.00</td>
-                    <td>50.00</td>
-                </tr>
-                <tr>
-                    <td>TOTAL A PAGAR</td>
-                    <td>9.00</td>
-                    <td>61.80</td>
-                </tr>
-                <tr>
-                    <td>EFECTIVO</td>
-                    <td></td>
-                    <td>100.00</td>
+                    <td>{props.bill.paymentMethod}</td>
+                    <td/>
+                    <td>{props.bill.payed}</td>
                 </tr>
                 <tr>
                     <td>CAMBIO</td>
-                    <td></td>
-                    <td>38.20</td>
+                    <td/>
+                    <td>{props.bill.change}</td>
                 </tr>
                 </tbody>
             </Table>

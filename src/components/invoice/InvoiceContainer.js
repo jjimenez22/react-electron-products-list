@@ -3,7 +3,10 @@ import {connect} from 'react-redux';
 import Invoice from "./Invoice";
 
 function mapStateToProps(state) {
-    return {};
+    return {
+        items: state.purchase.items,
+        bill: state.purchase.bill,
+    };
 }
 
 const InvoiceContainer = connect(

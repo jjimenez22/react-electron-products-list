@@ -10,7 +10,7 @@ let client = {
 function mapStateToProps(state) {
     return {
         show: state.purchase.status === ENTER_CLIENT_STATUS,
-        onNameChange: e => Object.assign(client, {name: e.target.value}),
+        onNameChange: e => Object.assign(client, {name: e.target.value}),//todo cuando este completo el form intentar hacer un unico metodo de actualizacion
     };
 }
 

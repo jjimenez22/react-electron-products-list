@@ -1,6 +1,6 @@
 const initialState = [
     {
-        id: 0,
+        id: '0',
         description: 'Atún en Lata',
         price: 0.80,
         itbis: 0.08,
@@ -8,19 +8,35 @@ const initialState = [
         existence: 10.00
     },
     {
-        id: 1,
+        id: '1',
         description: 'Jabón la Llave',
         price: 2.00,
         itbis: 0.20,
-        discount: 6.60,
+        discount: 0.60,
         existence: 10.00
     },
     {
-        id: 2,
-        description: 'extra',
-        price: 2.00,
-        itbis: 0.20,
+        id: '2',
+        description: 'Harina de trigo',
+        price: 1.00,
+        itbis: 0.10,
         discount: 0.20,
+        existence: 10.00
+    },
+    {
+        id: '3',
+        description: 'Salsa para pasta',
+        price: 1.50,
+        itbis: 0.15,
+        discount: 0,
+        existence: 10.00
+    },
+    {
+        id: '4',
+        description: 'Galletas Oreo',
+        price: 3.00,
+        itbis: 0.30,
+        discount: 0,
         existence: 10.00
     },
 ];

@@ -1,6 +1,6 @@
 import ActionBar from "./ActionBar";
 import {connect} from "react-redux";
-import {addProduct} from "../../../actions";
+import {showAddProductModal} from "../../../actions";
 
 function mapStateToProps(state) {
     return {};
@@ -8,8 +8,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        onAdd: (id) => {
-            dispatch(addProduct(2, 2))
+        onAdd: e => {
+            dispatch(showAddProductModal());
+            // e.preventDefault();
         }
     };
 }

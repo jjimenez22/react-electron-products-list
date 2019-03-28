@@ -5,6 +5,7 @@ import PointsContainer from "./points/PointsContainer";
 import Banner from "./banner/Banner";
 import PaymentModalContainer from "./payment/PaymentModalContainer";
 import ClientModalContainer from "./client/ClientModalContainer";
+import ProductModalContainer from "./productmodal/ProductModalContainer";
 
 export default function MainComponent() {
     return (
@@ -15,6 +16,7 @@ export default function MainComponent() {
                 <PointsContainer/>
                 <Banner/>
             </div>
+            <ProductModalContainer/>
             <PaymentModalContainer/>
         </main>
     );

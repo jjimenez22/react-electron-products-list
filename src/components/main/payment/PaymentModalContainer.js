@@ -1,17 +1,21 @@
 import {connect} from 'react-redux';
 import PaymentModal from "./PaymentModal";
 import {ENTER_PAYMENT_STATUS} from "../../../reducers/purchase";
-import {printInvoice} from "../../../actions";
+import {hideModal, printInvoice, setPayed, setPaymentMethod} from "../../../actions";
 
 function mapStateToProps(state) {
     return {
         show: state.purchase.status === ENTER_PAYMENT_STATUS,
+        bill: state.purchase.bill,
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
+        onPayedChange: e => dispatch(setPayed(Number(e.target.value))),
+        onMethodChange: e => dispatch(setPaymentMethod(e.target.value)),
         onPay: e => dispatch(printInvoice()),
+        onCancel: e => dispatch(hideModal()),
     };
 }
 
