@@ -8,3 +8,17 @@
     padding-left: 1.2rem !important;
     padding-right: 1.2rem !important;
 }
+
+.btn-primary {
+    background-color: #00b286;
+}
+
+.btn-group-lg {
+    width: 100%;
+}
+
+.modal-header {
+    background-color: black;
+    border-color: black;
+    color: white;
+}

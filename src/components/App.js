@@ -7,7 +7,7 @@ import FooterComponent from "./footer/FooterComponent";
 import {Route} from "react-router-dom";
 import RedirectRoute from "./commons/RedirectRoute";
 import InvoicesContainer from "./invoices/InvoicesContainer";
-import ProductsContainer from "./products/ProductsContainer";
+import ProductsContainer from "./productslist/ProductsContainer";
 import ClientsContainer from "./clients/ClientsContainer";
 import UsersContainer from "./users/UsersContainer";
 

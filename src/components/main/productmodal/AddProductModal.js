@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button, Form, Modal} from "react-bootstrap";
+import {Button, ButtonGroup, Form, Modal} from "react-bootstrap";
 
 const AddProductModal = props => {
     return (
@@ -14,8 +14,10 @@ const AddProductModal = props => {
                 </Form>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onAccept} type="submit" variant="primary">Aceptar</Button>
-                <Button onClick={props.onCancel} variant="secondary">Cancelar</Button>
+                <ButtonGroup size="lg">
+                    <Button onClick={props.onAccept} variant="primary">Aceptar</Button>
+                    <Button onClick={props.onCancel} variant="secondary">Cancelar</Button>
+                </ButtonGroup>
             </Modal.Footer>
         </Modal>
     );

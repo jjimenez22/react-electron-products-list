@@ -19,7 +19,7 @@ const ClientModal = props => {
                 </Form>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={props.onAccept} variant="primary" type="submit">Aceptar</Button>
+                <Button onClick={props.onAccept} variant="primary" block size="lg">Aceptar</Button>
             </Modal.Footer>
         </Modal>
     );

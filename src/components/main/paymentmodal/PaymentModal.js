@@ -2,13 +2,16 @@ import React from 'react';
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import './payment.css';
 import format from "../../../util/numberFormat";
-import Link from "react-router-dom/es/Link";
+import {ButtonGroup} from "react-bootstrap";
 
 const PaymentModal = (props) => {
     const paymentMethods = ['credito', 'debito', 'efectivo']
         .map(value => <option key={value}>{value}</option>);
+    const onPay = e => {
+        props.onPay(e);
+        props.history.push({pathname: "/invoice"});
+    };
     return (
         <Modal show={props.show} id="payment-modal">
             <Modal.Header>
@@ -29,11 +32,10 @@ const PaymentModal = (props) => {
                 </Form>
             </Modal.Body>
             <Modal.Footer>
-                <Link to="/invoice">
-                    <Button onClick={props.onPay} variant="primary">Pagar</Button>
-                </Link>
-                <Button variant="secondary"
-                        onClick={props.onCancel}>Cancelar</Button>
+                <ButtonGroup size="lg">
+                    <Button onClick={onPay} variant="primary">Pagar</Button>
+                    <Button variant="secondary" onClick={props.onCancel}>Cancelar</Button>
+                </ButtonGroup>
             </Modal.Footer>
         </Modal>
     );

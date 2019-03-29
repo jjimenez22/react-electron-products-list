@@ -3,10 +3,11 @@ import PaymentModal from "./PaymentModal";
 import {ENTER_PAYMENT_STATUS} from "../../../reducers/purchase";
 import {hideModal, printInvoice, setPayed, setPaymentMethod} from "../../../actions";
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
     return {
         show: state.purchase.status === ENTER_PAYMENT_STATUS,
         bill: state.purchase.bill,
+        history: ownProps.history,
     };
 }
 

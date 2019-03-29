@@ -9,40 +9,18 @@ export const PRINTING_STATUS = 'PRINTING';
 
 const initialState = {
     status: ENTER_CLIENT_STATUS,
-    client: {
-        // name: 'Randy Javier',
-    },
+    client: {},
     points: {
         generated: 0,
         available: 0,
     },
-    items: [
-        // {
-        //     product: {
-        //         id: 0,
-        //         description: 'Atún en Lata',
-        //         price: 0.80,
-        //         itbis: 0.08,
-        //         discount: 0.0
-        //     },
-        //     amount: 1
-        // },
-        // {
-        //     product: {
-        //         id: 1,
-        //         description: 'Jabón la Llave',
-        //         price: 2.00,
-        //         itbis: 0.20,
-        //         discount: 0.60
-        //     },
-        //     amount: 2
-        // },
-    ],
+    items: [],
     bill: {
         payed: 0,
         change: 0,
         saved: 0,
         total: 0,
+        itbis: 0,
         paymentMethod: 'credito',
     }
 };
@@ -61,17 +39,20 @@ function bill(state = {}, action) {
     }
 
     const discount = action.product.discount * action.amount;
-    const price = (action.product.price + action.product.itbis) * action.amount - discount;
+    const itbis = action.product.itbis * action.amount;
+    const price = action.product.price * action.amount - discount + itbis;
     switch (action.type) {
         case ADD_PRODUCT:
             return Object.assign({}, state, {
                 saved: state.saved - discount,
-                total: state.total + price
+                total: state.total + price,
+                itbis: state.itbis + itbis,
             });
         case REMOVE_PRODUCT:
             return Object.assign({}, state, {
                 saved: state.saved + discount,
-                total: state.total - price
+                total: state.total - price,
+                itbis: state.itbis - itbis,
             });
         default:
             return state;

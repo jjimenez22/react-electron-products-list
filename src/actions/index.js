@@ -43,7 +43,7 @@ export function setPayed(payed) {
 }
 
 export function setPaymentMethod(method) {
-    return {type: SET_PAYED, paymentMethod: method};
+    return {type: SET_PAYMENT_METHOD, paymentMethod: method};
 }
 
 export function printInvoice() {

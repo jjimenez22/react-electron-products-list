@@ -3,11 +3,11 @@ import React from 'react';
 import ProductTableContainer from "./products/ProductTableContainer";
 import PointsContainer from "./points/PointsContainer";
 import Banner from "./banner/Banner";
-import PaymentModalContainer from "./payment/PaymentModalContainer";
-import ClientModalContainer from "./client/ClientModalContainer";
+import PaymentModalContainer from "./paymentmodal/PaymentModalContainer";
+import ClientModalContainer from "./clientmodal/ClientModalContainer";
 import ProductModalContainer from "./productmodal/ProductModalContainer";
 
-export default function MainComponent() {
+export default function MainComponent(props) {
     return (
         <main className="height-main">
             <ClientModalContainer/>
@@ -17,7 +17,7 @@ export default function MainComponent() {
                 <Banner/>
             </div>
             <ProductModalContainer/>
-            <PaymentModalContainer/>
+            <PaymentModalContainer history={props.history}/>
         </main>
     );
 }
