@@ -33,6 +33,10 @@
     padding: 0;
 }
 
+#invoice td:nth-child(2), #invoice td:nth-child(3) {
+    text-align: center;
+}
+
 #invoice th {
     border-bottom: 1px dashed;
     padding: 5px;

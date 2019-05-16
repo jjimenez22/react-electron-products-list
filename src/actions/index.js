@@ -12,10 +12,17 @@ export const PRINT_INVOICE = 'PRINT_INVOICE';
 export const SET_PAYED = 'SET_PAYED';
 export const SET_PAYMENT_METHOD = 'SET_PAYMENT_METHOD';
 
+export const NONE = 'NONE';
+
 const getProduct = (id) => Store.getState().products.find(value => value.id === id);
 
 export function addProduct(productId, amount) {
-    return {type: ADD_PRODUCT, product: getProduct(productId), amount: amount};//todo manejo de error - id invalido
+    const product = getProduct(productId);
+    if (product) {
+        return {type: ADD_PRODUCT, product: product, amount: amount};//todo manejo de error - id invalido
+    } else {
+        return {type: NONE}; //todo refinar errores
+    }
 }
 
 export function removeProduct(productId) {

@@ -13,8 +13,13 @@ const ClientModal = props => {
             <Modal.Body>
                 <Form onSubmit={props.onAccept}>
                     <Form.Group>
-                        <Form.Label>Nombre del Cliente</Form.Label>
+                        <Form.Label>Nombre</Form.Label>
                         <Form.Control type="text" onChange={props.onNameChange}/>
+                        <Form.Label>Apellido</Form.Label>
+                        <Form.Control type="text" onChange={props.onLastNameChange}/>
+                        <Form.Label>Identidad</Form.Label>
+                        <Form.Control type="text" onChange={props.onIdChange}/>
+                        <input type="checkbox" onChange={props.onFiscalChange}/><Form.Label>Valor Fiscal</Form.Label>
                     </Form.Group>
                 </Form>
             </Modal.Body>

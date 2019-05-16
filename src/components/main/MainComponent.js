@@ -9,7 +9,7 @@ import ProductModalContainer from "./productmodal/ProductModalContainer";
 
 export default function MainComponent(props) {
     return (
-        <main className="height-main">
+        <>
             <ClientModalContainer/>
             <div className="row m-100 px-3">
                 <ProductTableContainer/>
@@ -18,6 +18,6 @@ export default function MainComponent(props) {
             </div>
             <ProductModalContainer/>
             <PaymentModalContainer history={props.history}/>
-        </main>
+        </>
     );
 }

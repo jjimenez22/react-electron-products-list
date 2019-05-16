@@ -16,11 +16,13 @@ function App() {
         <div id="main-wrapper">
             <RedirectRoute path="/main" to="/main/purchase"/>
             <Route path="/main" component={HeaderComponent}/>
-            <Route path="/main/purchase" component={MainComponent}/>
-            <Route path="/main/invoices" component={InvoicesContainer}/>
-            <Route path="/main/products" component={ProductsContainer}/>
-            <Route path="/main/clients" component={ClientsContainer}/>
-            <Route path="/main/users" component={UsersContainer}/>
+            <main className="height-main">
+                <Route path="/main/purchase" component={MainComponent}/>
+                <Route path="/main/invoices" component={InvoicesContainer}/>
+                <Route path="/main/products" component={ProductsContainer}/>
+                <Route path="/main/clients" component={ClientsContainer}/>
+                <Route path="/main/users" component={UsersContainer}/>
+            </main>
             <Route path="/main" component={FooterComponent}/>
         </div>
     );

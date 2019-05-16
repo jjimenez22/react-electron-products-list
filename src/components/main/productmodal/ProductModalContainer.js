@@ -15,10 +15,12 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         onAccept: e => {
-            dispatch(addProduct(id, 1));
+            if (id && id.length > 0) {
+                dispatch(addProduct(id, 1));
+            }
             e.preventDefault();
         },
-        onCancel: e => dispatch(hideModal()),
+        onCancel: _ => dispatch(hideModal()),
     }
 }
 
