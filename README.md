@@ -1,20 +1,14 @@
-#NERDCOM: Desktop V1 beta pos
 
-## Ejecutar la aplicación
+## Run the App
 
-### Desarrollo
+#### Web
+Run `npm start` in project's folder.
+With the service started you can browse [http://localhost:3000](http://localhost:3000) in any web browser.
 
-#### Ambiente Web
-Ejecutar `npm start` en la carpeta del proyecto para iniciar el servicio web.<br>
-Con el servicio en ejecución se puede probar la aplicación navegando a [http://localhost:3000](http://localhost:3000) en un navegador.
+#### Desktop
+Run `npm electron-start` in project's folder to init a new desktop window with the app running.
+The web service must be running.
 
-#### Ambiente Desktop
-Ejecutar `npm electron-start` en la carpeta del proyecto para iniciar la aplicación de escritorio en una ventana nueva.<br>
-Es necesario que el servicio web se encuentre en ejecución para su funcionamiento.
+### Executable
 
-#### Pruebas
-Ejecutar `npm test` en la carpeta del proyecto para correr todas las pruebas.
-
-### Producción
-
-Ejecutar `electron-pack` para generar los ejecutables de la aplicación en la carpeta `dist/`.
+Run `electron-pack` to genete a .exe in `dist/` folder.
