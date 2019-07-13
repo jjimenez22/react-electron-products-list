@@ -1,0 +1,6 @@
+header.topbar {
+    background-color: black !important;
+    height: 15%;
+    position: relative;
+    z-index: 50;
+}

@@ -1,0 +1,52 @@
+#invoice {
+    margin: auto;
+    padding: 20px 5px;
+    width: 300px;
+    font-size: 12px;
+}
+
+#invoice p:nth-child(2) {
+    margin-bottom: 12px;
+}
+
+#res-dgi p {
+    display: inline-block;
+    width: 50%;
+}
+
+#auth-dgi {
+    margin-bottom: 12px;
+}
+
+#enduser-invoice {
+    border-bottom: 1px dashed;
+    border-top: 1px dashed;
+    padding: 5px;
+    margin-top: 9px;
+}
+
+#invoice th, #invoice td {
+    border: 0;
+}
+
+#invoice td {
+    padding: 0;
+}
+
+#invoice td:nth-child(2), #invoice td:nth-child(3) {
+    text-align: center;
+}
+
+#invoice th {
+    border-bottom: 1px dashed;
+    padding: 5px;
+}
+
+#first-total td {
+    padding-top: 12px;
+}
+
+#thanks {
+    padding-bottom: 12px;
+    border-bottom: 1px dashed;
+}

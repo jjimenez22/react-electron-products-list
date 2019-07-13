@@ -1,0 +1,31 @@
+.column-menu {
+    height: 54%;
+    margin-top: auto;
+    border-top-left-radius: .5rem;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+nav.navbar li {
+    margin-right: 10px;
+}
+
+nav.navbar a {
+    color: black !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav.navbar a svg {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin: auto;
+    margin-bottom: 5px;
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}

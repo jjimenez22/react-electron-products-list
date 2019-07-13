@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Punto de Venta</title>
+    <!-- Custom CSS -->
+    <link href="../assets/style.min.css" rel="stylesheet">
+    <!--<link href="../assets/styledark.min.css" rel="stylesheet">-->
+    <link href="../assets/ownStyles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <!--[endif]-->
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+
+<body class="b-white" style="font-family: 'Roboto', sans-serif;">
+<div id="main-wrapper">
+    <header class="topbar">
+        <div class="row m-100 p-3">
+            <div class="col-6 m-100">
+                <img src="../assets/images/logo-real-white.png" alt="logo" class="logo"/>
+            </div>
+            <div class="col-6 padding-top-and-right-1 ">
+                <p class="text-right header-text m-0">Randy Javier</p>
+                <p class="text-right header-text">Gracias por su compra</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="heigh-main">
+        <div class="row m-100 px-3">
+            <div class="col-7 m-100 table-container  p-0"   >
+                <div class="row table-responsive pt-2 m-100 mx-0 px-2">
+                    <table class="table padding-horizontal text-small border border-primary mb-0">
+                        <colgroup>
+                            <col style="width: 12%">
+                            <col style="width: 40%;">
+                            <col style="width: 16%;">
+                            <col style="width: 16%;">
+                            <col style="width: 16%;">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>Cant.</th>
+                            <th>Descripción</th>
+                            <th>Unidad</th>
+                            <th>ITBIS</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-right">2.00</td>
+                            <td>Atún en Lata</td>
+                            <td>0.80</td>
+                            <td>0.08</td>
+                            <td>1.76</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">3.00</td>
+                            <td>Jabón la Llave</td>
+                            <td>2.00</td>
+                            <td>0.20</td>
+                            <td>6.60</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">1.00</td>
+                            <td>Harina de trigo</td>
+                            <td>1.00</td>
+                            <td>0.10</td>
+                            <td>1.10</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">2.00</td>
+                            <td>Salsa para pasta Bolognessa</td>
+                            <td>1.50</td>
+                            <td>0.15</td>
+                            <td>3.30</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">5.00</td>
+                            <td>Galletas Oreo</td>
+                            <td>3.00</td>
+                            <td>0.30</td>
+                            <td>16.50</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">1.00</td>
+                            <td>Pasta integral</td>
+                            <td>0.90</td>
+                            <td>0.09</td>
+                            <td>0.99</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">1.00</td>
+                            <td>Queso azul</td>
+                            <td>10.00</td>
+                            <td>1.00</td>
+                            <td>11.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">0.50</td>
+                            <td>Salchichón curado</td>
+                            <td>5.00</td>
+                            <td>0.50</td>
+                            <td>2.75</td>
+                        </tr>
+                        <tr class="text-discount bold">
+                            <td></td>
+                            <td>Descuento</td>
+                            <td></td>
+                            <td></td>
+                            <td>-0.75</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">1.00</td>
+                            <td>Waffles Instantaneos</td>
+                            <td>8.00</td>
+                            <td>0.80</td>
+                            <td>8.80</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">2.00</td>
+                            <td>Caja de Samba</td>
+                            <td>15.00</td>
+                            <td>1.50</td>
+                            <td>33.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">1.50</td>
+                            <td>Naranja California</td>
+                            <td>1.00</td>
+                            <td>0.10</td>
+                            <td>1.65</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">0.3</td>
+                            <td>Jamón Ibérico</td>
+                            <td>40.00</td>
+                            <td>4.00</td>
+                            <td>13.30</td>
+                        </tr>
+                        <tr class="text-discount bold">
+                            <td></td>
+                            <td>Descuento</td>
+                            <td></td>
+                            <td></td>
+                            <td>-3.30</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">1.00</td>
+                            <td>Escoba</td>
+                            <td>2.00</td>
+                            <td>0.20</td>
+                            <td>2.20</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">5.00</td>
+                            <td>Manzana Verde</td>
+                            <td>0.50</td>
+                            <td>0.05</td>
+                            <td>2.75</td>
+                        </tr>
+                        <tr class="text-discount bold">
+                            <td></td>
+                            <td>Descuento</td>
+                            <td></td>
+                            <td></td>
+                            <td>-0.75</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">1.00</td>
+                            <td>Leche larga duración</td>
+                            <td>1.50</td>
+                            <td>0.15</td>
+                            <td>1.65</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">2.00</td>
+                            <td>Vino porto</td>
+                            <td>5.00</td>
+                            <td>0.50</td>
+                            <td>11.00</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-3 mt-2 m-100">
+                <div class="p-2 horizontal-line">
+                    <p class="tit-item text-center text-black">PUNTOS GENERADOS</p>
+                    <p class="price-item text-black text-center">14</p>
+                </div>
+                <div class="p-2 p-top-0">
+                    <p class="tit-item text-center text-black">PUNTOS DISPONIBLES</p>
+                    <p class="price-item text-black text-center">156</p>
+                </div>
+
+                <div class="p-2 text-center card-container">
+                    <div class="cuadro"></div>
+                </div>
+
+                <div class="column-buttons">
+                    <button>Pagar</button>
+                    <button>Retirar producto</button>
+                    <button>Anular factura</button>
+                </div>
+            </div>
+            <div class="col-2 mt-2 column-offer d-flex justify-content-center flex-column">
+                <h3>Precios Increiblemente Bajos</h3>
+                <div class="box-offer pt-0">
+                    <p class="box-offer-flat">Plano</p>
+                    <p class="text-discount-percent bold text-center">70%</p>
+                    <p class="text-discount bold text-center">DESCUENTO</p>
+                </div>
+                <!--<div class="box-offer pt-0">-->
+                <!--<img src="../assets/images/chuleta.png" alt="chuleta">-->
+                <!--<h3>Chuleta de ternera</h3>-->
+                <!--<p class="text-discount bold text-center">-15.25</p>-->
+                <!--</div>-->
+
+                <!--<div class="box-offer">-->
+                <!--<img src="../assets/images/huevos.png" alt="huevos">-->
+                <!--<h3>Huevos de gallina</h3>-->
+                <!--<p class="text-discount bold text-center">-5.05</p>-->
+                <!--</div>-->
+
+                <!--<div class="box-offer">-->
+                <!--<img src="../assets/images/leche.png" alt="huevos">-->
+                <!--<h3>Leche entera</h3>-->
+                <!--<p class="text-discount bold text-center">-8.75</p>-->
+                <!--</div>-->
+
+                <!--<div class="box-offer">
+                    <img src="../assets/images/pollo.png" alt="huevos">
+                    <h3>Pollo</h3>
+                    <p class="text-green bold text-center">-8.75</p>
+                </div>-->
+            </div>
+        </div>
+    </main>
+
+    <footer style="height: 20%;">
+        <div class="row m-100 m-0">
+            <div class="col-5 text-center" style="height: calc(100% - 10px); margin-bottom: 10px">
+                <div class="row half-height m-0">
+                    <div class="col-6 line">
+                        <p class="tit-item text-black">CAMBIO</p>
+                        <p class="price-item text-black">0.46</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="tit-item text-black">TOTAL PAGADO</p>
+                        <p class="price-item text-black">14,114.54</p>
+                    </div>
+                </div>
+
+                <div class="row half-height m-0">
+                    <div class="col-6">
+                        <p class="tit-item text-black">AHORRO TOTAL</p>
+                        <p class="price-item text-black text-discount">-4.80</p>
+                    </div>
+                    <div class="col-6 rounded highlighted">
+                        <p class="tit-item bold">TOTAL COMPRA</p>
+                        <p class="price-item">14,114.54</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-7 column-menu">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-cash-register d-block"></i>
+                                    Canjear
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-file-contract d-block"></i>
+                                    Facturas
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-users d-block"></i>
+                                    Clientes
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-shopping-cart d-block"></i>
+                                    Productos
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-hand-holding-usd d-block"></i>
+                                    Presupuesto
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-id-badge d-block"></i>
+                                    Usuarios
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-window-close d-block"></i>
+                                    Cerrar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!--<script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>-->
+<!--<script src="../assets/node_modules/popper/popper.min.js"></script>-->
+<!--<script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<!--<script src="dist/js/perfect-scrollbar.jquery.min.js"></script>-->
+<!--<script src="dist/js/waves.js"></script>-->
+<!--<script src="dist/js/sidebarmenu.js"></script>-->
+<!--<script src="../assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>-->
+<!--<script src="../assets/node_modules/sparkline/jquery.sparkline.min.js"></script>-->
+<!--<script src="dist/js/custom.min.js"></script>-->
+<!--<script src="../assets/node_modules/peity/jquery.peity.min.js"></script>-->
+<!--<script src="../assets/node_modules/peity/jquery.peity.init.js"></script>-->
+</body>
+
+</html>
